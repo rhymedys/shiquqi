@@ -1,0 +1,103 @@
+{
+  "list": [
+    {
+      "texts": [
+        {
+          "label": "2025-11-25 17:50:27",
+          "similar": false,
+          "values": [
+            ""
+          ]
+        },
+        {
+          "label": "2025-11-25 17:50:28",
+          "similar": false,
+          "values": [
+            "广东广州"
+          ]
+        }
+      ],
+      "snapshots": [],
+      "customResult": [],
+      "taskId": "57ec0d1f-89ea-4aee-8665-e9466a58c252",
+      "taskMockId": "a40590e8-e9aa-46cf-9879-ad75229f056d",
+      "_id": "da6d6528-8437-4d55-9461-574ae45b88c6",
+      "createdAt": 1764064229038
+    },
+    {
+      "texts": [
+        {
+          "label": "2025-11-25 17:48:01",
+          "similar": false,
+          "values": [
+            ""
+          ]
+        },
+        {
+          "label": "2025-11-25 17:48:03",
+          "similar": false,
+          "values": [
+            "广东广州"
+          ]
+        }
+      ],
+      "snapshots": [],
+      "customResult": [],
+      "taskId": "57ec0d1f-89ea-4aee-8665-e9466a58c252",
+      "taskMockId": "a40590e8-e9aa-46cf-9879-ad75229f056d",
+      "_id": "20b52866-1530-4566-91a6-3068f4587113",
+      "createdAt": 1764064083222
+    },
+    {
+      "texts": [
+        {
+          "label": "2025-11-25 17:44:59",
+          "similar": false,
+          "values": [
+            ""
+          ]
+        },
+        {
+          "label": "2025-11-25 17:45:01",
+          "similar": false,
+          "values": [
+            "广东广州"
+          ]
+        }
+      ],
+      "snapshots": [],
+      "customResult": [],
+      "taskId": "57ec0d1f-89ea-4aee-8665-e9466a58c252",
+      "taskMockId": "a40590e8-e9aa-46cf-9879-ad75229f056d",
+      "_id": "fea7e17c-2f4a-441f-89af-9d595164ce43",
+      "createdAt": 1764063901196
+    },
+    {
+      "texts": [
+        {
+          "label": "2025-11-25 17:40:17",
+          "similar": false,
+          "values": [
+            "梁伟青,赖礼尊,阮志明|邓建科|梁伟青"
+          ]
+        }
+      ],
+      "snapshots": [],
+      "customResult": [],
+      "taskId": "57ec0d1f-89ea-4aee-8665-e9466a58c252",
+      "taskMockId": "a40590e8-e9aa-46cf-9879-ad75229f056d",
+      "_id": "2aac7da0-dc67-4e94-8b0c-96d6269831c0",
+      "createdAt": 1764063618018
+    },
+    {
+      "texts": [],
+      "snapshots": [],
+      "customResult": [],
+      "taskId": "57ec0d1f-89ea-4aee-8665-e9466a58c252",
+      "taskMockId": "a40590e8-e9aa-46cf-9879-ad75229f056d",
+      "_id": "fe6de7e7-c6fa-40a9-bb64-4e23c12678c8",
+      "createdAt": 1764063536946
+    }
+  ],
+  "updatedAt": 1764064229038
+}
