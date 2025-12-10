@@ -61,7 +61,7 @@ function App({
     <Editor
       height='100%'
       defaultLanguage='javascript'
-      theme='vs-dark'
+      // theme='vs-dark'
       value={defaultValue}
       options={{
         readOnly: readonly,

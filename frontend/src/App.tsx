@@ -56,18 +56,18 @@ function App() {
   }, []);
   return visible ? (
     <ConfigProvider
-      theme={{
-        algorithm: theme.darkAlgorithm,
-        token: {
-          fontFamily: 'PuHui55Regular',
-          colorPrimary: '#3160F8',
-        },
-        components: {
-          Menu: {
-            darkItemSelectedBg: '#3a3a3a',
-          },
-        },
-      }}
+      // theme={{
+      //   // algorithm: theme.darkAlgorithm,
+      //   // token: {
+      //   //   fontFamily: 'PuHui55Regular',
+      //   //   colorPrimary: '#3160F8',
+      //   // },
+      //   // components: {
+      //   //   Menu: {
+      //   //     darkItemSelectedBg: '#3a3a3a',
+      //   //   },
+      //   // },
+      // }}
       locale={zhCN}>
       {contextHolder}
       {modalContextHolder}

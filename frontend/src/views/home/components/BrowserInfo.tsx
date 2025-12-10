@@ -78,13 +78,15 @@ function App() {
             label: (
               <div className='flex items-center'>
                 <Tooltip title={item.title} placement='bottom'>
-                  <div className='w-[150px] truncate mr-[10px] text-[#ffffffd9]'>{item.title}</div>
+                  <div className='w-[150px] truncate mr-[10px] '>{item.title}</div>
                 </Tooltip>
                 {info.length > 1 ? (
                   <div
                     className='hover:bg-[#3e3e3e] w-[20px] h-[20px] flex items-center justify-center rounded-full'
                     onClick={(e: any) => handleClosePage(e, item)}>
-                    <CloseOutlined style={{ color: '#b0b0b0', fontSize: '13px' }} color='#000' />
+                    <CloseOutlined
+                      style={{ fontSize: '13px' }}
+                      color='#000' />
                   </div>
                 ) : null}
               </div>
@@ -101,7 +103,7 @@ function App() {
           src={activeUrl}></iframe>
       ) : (
         <div
-          className='w-full border-none flex items-center justify-center text-[#ffffff86]'
+          className='w-full border-none flex items-center justify-center '
           style={{ height: 'calc(100% - 56px)' }}>
           <div className='mb-[50px]'>请选择选项卡</div>
         </div>

@@ -4,6 +4,8 @@ import {
   HomeOutlined,
   InfoCircleOutlined,
   JavaScriptOutlined,
+  MacCommandOutlined,
+  CodeOutlined,
 } from '@ant-design/icons';
 import { Menu, Tooltip, Modal } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -24,7 +26,7 @@ function About() {
       <div className='cursor-pointer'>
         <Tooltip placement='right' title='关于'>
           <InfoCircleOutlined
-            style={{ color: '#d1d1d1', fontSize: '20px' }}
+            style={{ fontSize: '20px' }}
             onClick={handleShowModal}
           />
         </Tooltip>
@@ -32,10 +34,7 @@ function About() {
       <Modal open={visible} footer={null} closable={false} onCancel={handleClose}>
         <div className='flex items-center flex-col pt-[30px] pb-[20px]'>
           <img src={Robot} className='block w-[64px] h-[64px]' alt='icon' />
-          <div className='font-bold text-[18px] mt-[12px]'>拾取器</div>
-          <div className='mt-[10px]'>一款基于 Electron + Puppeteer 的可视化爬虫工具</div>
-          <div className='mt-[10px]'>Version: 1.0.0_alpha</div>
-          <div className='mt-[10px]'>Author: qianqianhaiou</div>
+          <div className='font-bold text-[18px] mt-[12px]'>DataHound</div>
         </div>
       </Modal>
     </>
@@ -64,7 +63,7 @@ function App() {
     {
       label: '服务日志',
       key: '/logs',
-      icon: <img src={Terminal} className='w-[16px] h-[16px]' alt='' />,
+      icon: <CodeOutlined />,
     },
     {
       label: '全局设置',
@@ -81,7 +80,7 @@ function App() {
         defaultSelectedKeys={[local.pathname]}
         mode='inline'
         style={{ width: '60px', backgroundColor: 'transparent' }}
-        theme='dark'
+        // theme='dark'
         inlineCollapsed={true}
         onClick={MenuChange}
         items={MenuItems}

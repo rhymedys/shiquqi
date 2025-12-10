@@ -13,7 +13,7 @@ function App() {
   };
   return (
     <div className='w-full h-full items-center break-all justify-center'>
-      <div className='bg-[#272727] h-[48px]'>
+      <div className=' h-[48px]'>
         <div className='flex h-full justify-between items-center px-[16px]'>
           <div></div>
           <div>

@@ -78,7 +78,7 @@ function TaskFlow({ setTaskFlowVisible }: { setTaskFlowVisible: any }) {
 
   return config?.targetUrl ? (
     <Drawer
-      style={{ height: `${drwerHeight}px` }}
+      style={{ height: `100vh` }}
       push={false}
       title={
         <div className='w-full flex items-center justify-between'>
@@ -444,7 +444,6 @@ const FlowChart = ({
 
   return (
     <>
-    12121213
       <div
         style={{ width: '100%', height: '100%' }}
         ref={chartRef}
@@ -584,7 +583,6 @@ function ReSettingTask({
       </Button>
       {url ? (
         <>
-        112121
           <iframe
             className='fixed z-[2147483646] w-full left-0 top-[42px]'
             style={{ border: 'none', height: 'calc(100% - 42px)' }}

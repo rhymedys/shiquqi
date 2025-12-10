@@ -38,9 +38,9 @@ function ListItem({ data, taskId }: { data: any; taskId: string }) {
       <div>
         <div className='mb-[30px]'>
           <Alert
-            className='px-[10px] py-[20px] bg-[#292929] border-[#292929]'
+            className='px-[10px] py-[20px]'
             message={<div className='text-[20px] font-bold pl-[12px]'>文本数据</div>}
-            type='success'
+            type='info'
             description={
               <Row style={{ margin: '0px' }} gutter={[16, 16]}>
                 {data.texts.map((item: any, index: number) => {
@@ -73,9 +73,9 @@ function ListItem({ data, taskId }: { data: any; taskId: string }) {
         </div>
         <div className='mb-[30px]'>
           <Alert
-            className='px-[10px] py-[20px] bg-[#292929] border-[#292929]'
+            className='px-[10px] py-[20px] '
             message={<div className='text-[20px] font-bold pl-[12px]'>截图数据</div>}
-            type='success'
+            type='info'
             description={
               <Row style={{ margin: '0px' }} gutter={[16, 16]}>
                 {data.snapshots.map((item: any, index: number) => {
@@ -90,15 +90,15 @@ function ListItem({ data, taskId }: { data: any; taskId: string }) {
                           <div className='flex justify-center flex-wrap mt-[10px]'>
                             {item?.uids?.length
                               ? item.uids.map((uid: string) => {
-                                  return (
-                                    <Image
-                                      className='mb-[10px]'
-                                      key={uid}
-                                      width={200}
-                                      src={snapshotPath(uid)}
-                                    />
-                                  );
-                                })
+                                return (
+                                  <Image
+                                    className='mb-[10px]'
+                                    key={uid}
+                                    width={200}
+                                    src={snapshotPath(uid)}
+                                  />
+                                );
+                              })
                               : null}
                           </div>
                         </div>
@@ -112,9 +112,9 @@ function ListItem({ data, taskId }: { data: any; taskId: string }) {
         </div>
         <div>
           <Alert
-            className='px-[10px] py-[20px] bg-[#292929] border-[#292929]'
+            className='px-[10px] py-[20px]'
             message={<div className='text-[20px] font-bold pl-[12px]'>自定义数据</div>}
-            type='success'
+            type='info'
             description={
               <Row style={{ margin: '0px' }} gutter={[16, 16]}>
                 {data.customResult.map((item: any, index: number) => {
@@ -168,7 +168,7 @@ function App({ setDetailVisible }: { setDetailVisible: any }) {
         messageApi.success('删除成功');
         setDetailVisible(false);
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
   const fetchList = async () => {
@@ -189,7 +189,7 @@ function App({ setDetailVisible }: { setDetailVisible: any }) {
   return (
     <Drawer
       className={loading ? style.Drawer : style.DrawerScroll}
-      style={{ height: `${drwerHeight}px` }}
+      style={{ height: `100vh` }}
       title={
         <div className='w-full flex items-center justify-between'>
           <div className='flex items-center'>

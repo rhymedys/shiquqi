@@ -42,32 +42,32 @@ function App(props: any) {
   }, []);
   return (
     <div className='w-full h-full flex flex-col'>
-      <div className='title-bar flex-shrink-0 w-full h-[42px] bg-[#202124] text-[#f1f1f2] flex justify-between items-center pl-[20px] box-border'>
+      <div className='title-bar flex-shrink-0 w-full h-[42px] flex justify-between items-center pl-[20px] box-border'>
         <div className='title text-[12px] flex items-center'>
           <div className='w-[20px] h-[20px] mr-[10px]'>
             <div className='iconfac'></div>
           </div>
-          <div className='leading-[20px]'>拾取器</div>
+          <div className='leading-[20px]'>DataHound</div>
         </div>
         <div className='operator h-full flex items-center cursor-default'>
           {/* <div
-            className='h-full hover:bg-[#3a3a3d] leading-[42px] px-[14px]'
+            className='h-full leading-[42px] px-[14px]'
             onClick={handleOpenChrome}>
             <GlobalOutlined />
           </div>
           <div className='h-[40%] bg-[#7b7b7b] w-[1px] mx-[3px]'></div> */}
           <div
-            className='h-full hover:bg-[#3a3a3d] leading-[42px] px-[14px]'
+            className='h-full leading-[42px] px-[14px]'
             onClick={handleMinimizeWindow}>
             <MinusOutlined />
           </div>
           <div
-            className='h-full hover:bg-[#3a3a3d] leading-[42px] px-[14px]'
+            className='h-full leading-[42px] px-[14px]'
             onClick={handleMaxOrUnMaxWindow}>
             {fullScreen ? <FullscreenExitOutlined /> : <FullscreenOutlined />}
           </div>
           <div
-            className='h-full hover:bg-[#3a3a3d] leading-[42px] px-[14px]'
+            className='h-full leading-[42px] px-[14px]'
             onClick={handleCloseApp}>
             <CloseOutlined />
           </div>
@@ -75,12 +75,12 @@ function App(props: any) {
       </div>
       <div className='flex flex-1' style={{ height: 'calc(100% - 42px)' }}>
         {DATA_PATH && (
-          <div className='w-[60px] flex-shrink-0 bg-[#272727]'>
+          <div className='w-[60px] flex-shrink-0 '>
             <Aside></Aside>
           </div>
         )}
         <div
-          className='bg-[#181818] flex-1 overflow-y-auto f-beautify-scrollbar'
+          className='flex-1 overflow-y-auto f-beautify-scrollbar'
           style={{ width: 'calc(100% - 60px)' }}>
           {props.children}
         </div>

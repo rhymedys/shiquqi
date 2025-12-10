@@ -58,7 +58,7 @@ function App() {
           setList([]);
         }
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
   useEffect(() => {
@@ -82,14 +82,14 @@ function App() {
     };
   }, []);
   return (
-    <div className='bg-[#212121]'>
+    <div >
       {contextHolder}
       {messageContextHolder}
       <div className='h-[36px]'></div>
-      <div className='h-[36px] bg-[#000] flex items-center justify-between py-[10px] px-[20px] mx-[20px]'>
+      <div className='h-[36px] flex items-center justify-between py-[10px] px-[20px] mx-[20px]'>
         <div className='font-bold'>服务日志</div>
         {list.length ? (
-          <Button danger type='text' onClick={handleClearLogs}>
+          <Button danger onClick={handleClearLogs}>
             清空日志
           </Button>
         ) : (
@@ -97,7 +97,7 @@ function App() {
         )}
       </div>
       <VirtualList
-        className={style.VList + ' px-[20px] pb-[20px] mx-[20px] bg-[#000]'}
+        className={style.VList + ' px-[20px] pb-[20px] mx-[20px]'}
         ref={vListRef}
         data={list}
         height={height}

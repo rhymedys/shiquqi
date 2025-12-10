@@ -31,14 +31,14 @@ function App() {
     setBoxes(jsList);
   }, []);
   return (
-    <div className='h-full bg-[#1e1e1e]'>
+    <div className='h-full'>
       <Spin spinning={loading} tip='创建成功，正在跳转' fullscreen />
       <div className='flex flex-wrap justify-start pb-[1px]'>
         {boxes.map((item: any) => {
           return (
             <Card
               key={item.createdAt}
-              className='cursor-pointer h-[92px] flex justify-center items-center hover:bg-[#252525]'
+              className='cursor-pointer h-[92px] flex justify-center items-center '
               style={{ width: '20%' }}
               onClick={() => handleToDetail(item.createdAt)}>
               <div className='line-clamp-2'>{item.title}</div>
@@ -46,7 +46,7 @@ function App() {
           );
         })}
         <Card
-          className='cursor-pointer h-[92px] flex justify-center items-center hover:bg-[#252525]'
+          className='cursor-pointer h-[92px] flex justify-center items-center'
           style={{ width: '20%', borderWidth: '2px', borderStyle: 'dashed' }}
           onClick={() => handleAdd()}>
           <div className='flex items-center'>

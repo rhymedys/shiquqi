@@ -71,7 +71,7 @@ function App({ type, setEditVisible }: { type: string; setEditVisible: any }) {
         handleClose();
         refresh();
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
   const onFinish = async (values: any) => {
@@ -139,7 +139,7 @@ function App({ type, setEditVisible }: { type: string; setEditVisible: any }) {
           <Input placeholder='请输入网站地址' />
         </Form.Item>
         <Form.Item name='cookies' label='Cookies'>
-          <TextArea placeholder='请输入Cookies（JSON数组格式）' rows={4} maxLength={8} />
+          <TextArea placeholder='请输入Cookies（JSON数组格式）' rows={4} />
         </Form.Item>
         {type === 'edit' && (
           <>
