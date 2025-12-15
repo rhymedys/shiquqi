@@ -1,12 +1,12 @@
-# 拾取器 - JunkPuppet
+# DataHound - JunkPuppet
 
 > 进入 [GitHub Releases Page](https://github.com/qianqianhaiou/JunkPuppet/releases) 下载最新版本
 
 > [使用说明: https://qianqianhaiou.github.io/JunkPuppetDoc/](https://qianqianhaiou.github.io/JunkPuppetDoc/)
 
-## 什么是拾取器？
+## 什么是DataHound？
 
-`拾取器`是一款借助 [Electron](https://github.com/electron/electron) + [Puppeteer](https://github.com/puppeteer/puppeteer) 技术构建而成的可视化爬虫工具。其具备便捷的下载即用特性，不存在任何外部依赖项。该工具能够被用于开展浏览器自动化任务以及信息采集工作。其操作方式极为简易，拥有图形化的操作界面，可通过模拟人手操作来有效对抗反爬机制。它还支持注入模拟键鼠事件以及自定义函数，足以应对百分之八十的自动化需求情形，为用户在相关领域的工作提供有力支持与高效解决方案。
+`DataHound`是一款借助 [Electron](https://github.com/electron/electron) + [Puppeteer](https://github.com/puppeteer/puppeteer) 技术构建而成的可视化爬虫工具。其具备便捷的下载即用特性，不存在任何外部依赖项。该工具能够被用于开展浏览器自动化任务以及信息采集工作。其操作方式极为简易，拥有图形化的操作界面，可通过模拟人手操作来有效对抗反爬机制。它还支持注入模拟键鼠事件以及自定义函数，足以应对百分之八十的自动化需求情形，为用户在相关领域的工作提供有力支持与高效解决方案。
 
 ![img](./assets/images/task-flow.png)
 
@@ -52,7 +52,7 @@
 
 由于网络上运行着各种各样的爬虫，所以网站可能会对爬虫进行检测，并拦截掉那些爬虫。
 
-拾取器通过各种 模拟 + 修改 来伪装成真人操作，减少爬虫判定次数。
+DataHound通过各种 模拟 + 修改 来伪装成真人操作，减少爬虫判定次数。
 ::: details 所有 fpscanner 测试现在都是绿色的、所有 intoli 测试和 areyouheadless 测试都是绿色的
 ![img](./assets/images/fpscanner.png)
 ![img](./assets/images/areyouheadless.png)

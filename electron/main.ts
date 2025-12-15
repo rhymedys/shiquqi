@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, Tray, Notification } from 'electron';
+import { app, BrowserWindow, Menu, Tray, Notification, session } from 'electron';
 import { join } from 'node:path';
 import log4js from 'log4js';
 import {
@@ -52,7 +52,7 @@ function createWindow() {
   const appTray = new Tray(iconPath);
   const contextMenu = Menu.buildFromTemplate([
     {
-      label: '拾取器',
+      label: 'DataHound',
       click: function () {
         win.show();
       },
@@ -80,11 +80,11 @@ function createWindow() {
   appTray.on('double-click', () => {
     win.show();
   });
-  appTray.setToolTip('拾取器');
+  appTray.setToolTip('DataHound');
   appTray.setContextMenu(contextMenu);
   return win;
 }
-app.setAppUserModelId('JunkPuppet-拾取器');
+app.setAppUserModelId('JunkPuppet-DataHound');
 app
   .whenReady()
   .then(async () => {
@@ -166,8 +166,55 @@ app
     new Notification({ body: e }).show();
   });
 
-app.on('window-all-closed', () => {
+app.on('window-all-closed', async () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 });
+
+// 【关键】在应用完全退出前清空 Cookie
+
+app.on('before-quit', async () => {
+  console.log('app.on before-quit');
+  try {
+    await session.defaultSession.clearStorageData({
+      storages: [
+        'cookies',
+        'filesystem',
+        'indexdb',
+        'localstorage',
+        'shadercache',
+        'websql',
+        'serviceworkers',
+        'cachestorage',
+      ],
+    });
+    await session.defaultSession.clearCache()
+    await session.defaultSession.clearStorageData()
+  } catch (e) {
+    console.error('清空 storage 失败', e);
+  }
+});
+// app.on('will-quit', async (event) => {
+//   event.preventDefault(); // 阻止立即退出，等清理完成
+
+//   try {
+//     await session.defaultSession.clearStorageData({
+//       storages: [
+//         'cookies',
+//         'filesystem',
+//         'indexdb',
+//         'localstorage',
+//         'shadercache',
+//         'websql',
+//         'serviceworkers',
+//         'cachestorage',
+//       ],
+//     });
+//     console.log('🍪 clearCookie');
+//   } catch (error) {
+//     console.error('clearCookie.error:', error);
+//   }
+
+//   app.quit(); // 继续退出
+// });

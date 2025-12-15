@@ -10,7 +10,7 @@ import { BrowserWindow, Notification } from 'electron';
 
 const renderTaskResultMail = (result: any, to: string, parent: string) => {
   const receiver: any = {
-    from: `"拾取器"<${process.env.MAIL}>`,
+    from: `"DataHound"<${process.env.MAIL}>`,
     subject: '通知',
     to: to,
     html: `执行完成`,
@@ -297,6 +297,7 @@ export const startSetting = async (params: any) => {
 };
 export const killSetterProcess = async (params: any) => {
   globalThis.setterProcess?.kill();
+
   await closeTargetPage(params.pageId);
 };
 // 上传JSON模拟数据
@@ -396,7 +397,7 @@ export const startplay = async (params: any) => {
             console.log('任务：' + params.name + ' - 正在发送邮件');
             if (instance) {
               const message = {
-                from: `"拾取器"<${process.env.MAIL}>`,
+                from: `"DataHound"<${process.env.MAIL}>`,
                 subject: msg.data.subject,
                 to: msg.to,
                 html: msg.data.html,

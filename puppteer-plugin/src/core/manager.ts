@@ -66,9 +66,9 @@ async function initBrowser(props: any) {
 
   const [page] = await browser.pages();
   await page.setContent(
-    '<!DOCTYPE html><html><head><meta charset=utf-8><title>欢迎使用拾取器</title><style>html,body{height: 100%; overflow: hidden;}</style></head><body><div style="font-size: 56px; height: 100%; display: flex; align-items: center; justify-content: center;">' +
+    '<!DOCTYPE html><html><head><meta charset=utf-8><title>欢迎使用DataHound</title><style>html,body{height: 100%; overflow: hidden;}</style></head><body><div style="font-size: 56px; height: 100%; display: flex; align-items: center; justify-content: center;">' +
       '' +
-      '欢迎使用拾取器</div></body></html>',
+      '欢迎使用DataHound</div></body></html>',
   );
 
   browser.on('disconnected', (target) => {
