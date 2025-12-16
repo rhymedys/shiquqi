@@ -1,6 +1,16 @@
 {
   "list": [
     {
+      "name": "weibo",
+      "targetUrl": "https://weibo.com/psdashi",
+      "auto": false,
+      "cron": "",
+      "mockDataId": "",
+      "_id": "053cf1f5-f463-4080-908c-b6af1aaa343a",
+      "createdAt": 1765860569206,
+      "updatedAt": 1765860569206
+    },
+    {
       "name": "test",
       "targetUrl": "http://192.168.2.177:19000/chinaunicom-research-synergy-platform-view/#/login?redirect=%2Fdelivery-project-manage%2FprojectManage%2Findex",
       "auto": false,
@@ -11,5 +21,5 @@
       "updatedAt": 1765797867455
     }
   ],
-  "updatedAt": 1765797867455
+  "updatedAt": 1765860569206
 }

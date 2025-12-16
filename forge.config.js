@@ -1,16 +1,19 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    name: "JunkPuppet",
-    icon: "public/robot",
+    name: 'DBHound',
+    icon: 'public/robot',
+    asarUnpack: [
+      'node_modules/better-sqlite3/**/*', // 👈 必须包含
+    ],
     ignore: (url) => {
       if (
-        !url.startsWith("/") ||
-        url.startsWith("/dist") ||
-        url.startsWith("/dist-eletron") ||
-        url.startsWith("/node_modules") ||
-        url.startsWith("/public") ||
-        url.startsWith("/package.json")
+        !url.startsWith('/') ||
+        url.startsWith('/dist') ||
+        url.startsWith('/dist-eletron') ||
+        url.startsWith('/node_modules') ||
+        url.startsWith('/public') ||
+        url.startsWith('/package.json')
       ) {
         return false;
       } else {
@@ -44,8 +47,22 @@ module.exports = {
   // ],
   plugins: [
     {
-      name: "@electron-forge/plugin-auto-unpack-natives",
+      name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
     },
+    // {
+    //   name: '@electron-forge/plugin-webpack',
+    //   config: {
+    //     mainConfig: './webpack.main.config.js',
+    //     renderer: {
+    //       config: './webpack.renderer.config.js',
+    //       entryPoints: [{
+    //         html: './src/renderer/index.html',
+    //         js: './src/renderer/index.js',
+    //         name: 'main_window'
+    //       }]
+    //     }
+    //   }
+    // }
   ],
 };

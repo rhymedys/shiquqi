@@ -1,6 +1,8 @@
 import puppeteer from 'puppeteer-core';
 import { clearUserDataDirExitType, initLogger } from '../util/tools';
 import { resolve } from 'path';
+import { clearAllStorage } from '../util/cookies';
+import { IPage } from '../interface/base';
 const IS_DEV = process.argv[1].includes('setting.ts');
 const DEV_EXTENSION_PATH = resolve(__dirname, '../setter-extension/setter-dist');
 const PRO_EXTENSION_PATH = resolve(__dirname, './setter-dist');
@@ -16,7 +18,7 @@ async function initBrowser(props: any) {
   console.log('EXTENSION_PATH', EXTENSION_PATH);
 
   const launchParams: any = {
-    headless: "new", // 👈 关键！显示浏览器窗口
+    headless: 'new', // 👈 关键！显示浏览器窗口
     args: [
       // `--load-extension=${EXTENSION_PATH}`,
       // `--disable-extensions-except=${EXTENSION_PATH}`,
@@ -138,7 +140,14 @@ async function closeTargetPage(props: any, pageId: string) {
   const targetPage = pages.find((item: any) => {
     return item.target()._targetId === pageId;
   });
-  targetPage!.close();
+  // targetPage?.coo
+  if (targetPage) {
+    clearAllStorage({
+      page: targetPage as IPage,
+    });
+    targetPage.close();
+  }
+
   return browser.wsEndpoint();
 }
 

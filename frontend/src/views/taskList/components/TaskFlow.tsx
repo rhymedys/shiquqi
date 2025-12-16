@@ -553,17 +553,25 @@ function ReSettingTask({
 }) {
   const { refresh } = useContext(TaskListContext);
   const [url, setUrl] = useState('');
+  // const childProcessRef = useRef()
   const handleStartSetting = async () => {
     const result = await startSetting({
       ...config,
       mockData: '',
+      // closeCb: () => {
+      //   childProcessRef.current = undefined
+      // }
     });
+
     setUrl('');
     fetchTaskConfigDetail();
     refresh();
   };
   const handleCancel = async () => {
     const urlSplit = url.split('/');
+    // childProcessRef.current?.send({
+    //   type: 'closePage',
+    // })
     killSetterProcess({
       pageId: urlSplit[urlSplit.length - 1],
     });

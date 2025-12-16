@@ -19,7 +19,9 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "puppeteer-core": "^24.0.0",
+    "nanoid": "^5.1.6",
+    "psl": "^1.15.0",
+    "puppeteer-core": "^24.33.0",
     "uuid": "^9.0.0",
     "ws": "^8.18.3"
   },

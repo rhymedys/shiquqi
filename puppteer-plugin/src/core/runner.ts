@@ -22,6 +22,7 @@ import { injectHookWindowOpen, injectMouseFollwer } from '../service/inject';
 import { deceptionDetection, modifyCookies } from '../service/modify';
 import { LIFE_HOOKS } from '../util/const';
 import { getElementHandlesBySelector } from '../service/select';
+import { invokeNewPage } from '../util/page';
 
 // 初始化日志
 initLogger();
@@ -69,7 +70,7 @@ async function startTask(props: TaskRunnerData) {
     return;
   }
 
-  const page = await browser.newPage();
+  const page = await invokeNewPage(browser);
 
   // cdp session
   const client = await page.createCDPSession();

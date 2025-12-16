@@ -268,6 +268,7 @@ export const startSetting = async (params: any) => {
           database.chain.set('updatedAt', datanow).value();
           await database.write();
           ChildProcess.off('message', messageHandle);
+          console.log('messageHandle.fileName', fileName);
           resolve(fileName);
         } else if (msg.type === 'review') {
           const { host } = new URL(global.wsEndpoint);
@@ -286,10 +287,15 @@ export const startSetting = async (params: any) => {
       ChildProcess.on('message', messageHandle);
       ChildProcess.once('error', function (code: any) {
         reject('exit error code: ' + code);
+        // params.closeCb?.();
       });
       ChildProcess.once('close', function (code: any) {
+        console.log('task setter exit close code: ' + code);
+        // params.closeCb?.();
         resolve('exit close code: ' + code);
       });
+
+      // resolve(ChildProcess);
     });
   } catch (error: any) {
     console.log(`setter start error：${error.message}`);

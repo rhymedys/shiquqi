@@ -14,6 +14,9 @@ import { initLogger } from './service/logger';
 import { tranlateDate } from './utils/tools';
 import axios from 'axios';
 import { quitApplication } from './service/system';
+import { invokeInitDB } from './db';
+
+invokeInitDB();
 
 function createWindow() {
   const iconPath = join(process.env.VITE_PUBLIC, 'robot.png');
@@ -189,8 +192,8 @@ app.on('before-quit', async () => {
         'cachestorage',
       ],
     });
-    await session.defaultSession.clearCache()
-    await session.defaultSession.clearStorageData()
+    await session.defaultSession.clearCache();
+    await session.defaultSession.clearStorageData();
   } catch (e) {
     console.error('清空 storage 失败', e);
   }
