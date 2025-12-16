@@ -33,6 +33,7 @@
     "nodemailer": "^6.9.7"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
     "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-deb": "^6.4.2",
     "@electron-forge/maker-rpm": "^6.4.2",
