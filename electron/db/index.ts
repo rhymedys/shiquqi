@@ -6,6 +6,7 @@ import { app } from 'electron';
 const dbPath = path.join(app.getPath('userData'), 'app.db');
 const db = new Database(dbPath);
 
+console.log('dbPath', dbPath);
 export const invokeInitDB = () => {
   // 初始化表
   db.exec(`
@@ -13,6 +14,14 @@ export const invokeInitDB = () => {
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     content TEXT
+  )
+`);
+
+  db.exec(`
+  CREATE TABLE IF NOT EXISTS cookies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user TEXT NOT NULL,
+    cookieStr TEXT
   )
 `);
 };
