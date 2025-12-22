@@ -2,10 +2,6 @@
   "name": "DBHound",
   "private": true,
   "version": "0.0.1",
-  "author": {
-    "name": "qianqianhaiou"
-  },
-  "description": "zzzz",
   "scripts": {
     "install": "npm-run-all --serial install:*",
     "install:electron": "cd puppteer-plugin && npm i",
