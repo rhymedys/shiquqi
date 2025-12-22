@@ -78,10 +78,10 @@ async function startSetting(props: TaskSetterData) {
   });
   return new Promise(async (resolve, reject) => {
     try {
-      console.log('开始注入_junkpuppet_send_data');
-      await page.exposeFunction('_junkpuppet_send_data', async (data: any) => {
+      console.log('开始注入_dbhound_send_data');
+      await page.exposeFunction('_dbhound_send_data', async (data: any) => {
         const dataJson = JSON.parse(data);
-        console.log('_junkpuppet_send_data.recive', dataJson);
+        console.log('_dbhound_send_data.recive', dataJson);
         try {
           if (dataJson.type === 'finishSetting') {
             operateListData = operateListData.concat(dataJson.operateListData);

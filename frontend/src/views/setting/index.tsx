@@ -103,22 +103,6 @@ function App() {
           </Button>
         ) : null}
       </div>
-      <div className='mb-[20px]'>
-        <div className='font-bold text-[18px] mb-[10px]'>邮件地址</div>
-        <Input
-          className='w-[400px]'
-          value={mail}
-          onChange={(e) => setMail(e.target.value)}
-          disabled={status !== 'edit'}></Input>
-      </div>
-      <div>
-        <div className='font-bold text-[18px] mb-[10px]'>邮件令牌</div>
-        <Input.Password
-          className='w-[400px]'
-          value={mailToken}
-          onChange={(e) => setMailToken(e.target.value)}
-          disabled={status !== 'edit'}></Input.Password>
-      </div>
     </div>
   );
 }

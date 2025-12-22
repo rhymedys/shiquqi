@@ -10,9 +10,6 @@
       </div>
       <div class="header">
         <div class="title">
-          <div class="robot">
-            <IconRobot></IconRobot>
-          </div>
           <div class="tabs">
             <div
               :class="{ tab: true, active: activeTab === 'selector' }"
@@ -327,7 +324,6 @@ import { computed, watch, ref, onBeforeMount, inject, onBeforeUnmount } from 'vu
 import Selector from './Selector.vue';
 import IconMove from './icons/Move.vue';
 import { formatOperateType } from '../util/format';
-import IconRobot from './icons/Robot.vue';
 import IconRecordOn from './icons/RecordOn.vue';
 import IconRecordOff from './icons/RecordOff.vue';
 import OperateListData from './OperateListData.vue';

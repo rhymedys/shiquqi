@@ -1,5 +1,5 @@
 {
-  "name": "junk-puppet-fe",
+  "name": "DBHound-fe",
   "private": true,
   "version": "0.0.1",
   "author": {
@@ -16,6 +16,7 @@
     "echarts": "^5.4.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
+    "rc-virtual-list": "^3.19.2",
     "react": "^18.2.0",
     "react-contexify": "^6.0.0",
     "react-dom": "^18.2.0",

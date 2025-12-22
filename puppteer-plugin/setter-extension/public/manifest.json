@@ -1,6 +1,6 @@
 {
-  "name": "junkpuppet-extension",
-  "description": "An extension for JunkPuppet",
+  "name": "dbhound-extension",
+  "description": "An extension for DBHound",
   "manifest_version": 3,
   "version": "1.0",
   "content_scripts": [

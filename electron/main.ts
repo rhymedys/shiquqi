@@ -14,9 +14,9 @@ import { initLogger } from './service/logger';
 import { tranlateDate } from './utils/tools';
 import axios from 'axios';
 import { quitApplication } from './service/system';
-import { invokeInitDB } from './db';
+// import { invokeInitDB } from './db';
 
-invokeInitDB();
+// invokeInitDB();
 
 function createWindow() {
   const iconPath = join(process.env.VITE_PUBLIC, 'robot.png');
@@ -87,7 +87,7 @@ function createWindow() {
   appTray.setContextMenu(contextMenu);
   return win;
 }
-app.setAppUserModelId('JunkPuppet-DataHound');
+app.setAppUserModelId('DBHound-DataHound');
 app
   .whenReady()
   .then(async () => {

@@ -4,6 +4,6 @@ interface HTMLElement {
 }
 interface Window {
   onmousewheel: Function;
-  _junkpuppet_send_data: any;
+  _dbhound_send_data: any;
 }
 declare module '*.vue';

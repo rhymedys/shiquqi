@@ -1,5 +1,5 @@
 {
-  "name": "junk-puppet",
+  "name": "DBHound",
   "private": true,
   "version": "0.0.1",
   "author": {
@@ -31,6 +31,7 @@
     "lodash": "^4.17.21",
     "log4js": "^6.9.1",
     "lowdb": "^6.1.0",
+    "node-abi": "^4.24.0",
     "nodemailer": "^6.9.7"
   },
   "devDependencies": {

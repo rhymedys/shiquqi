@@ -1,5 +1,5 @@
 export const sendMessage = (data: any) => {
-  const api = window._junkpuppet_send_data;
+  const api = window._dbhound_send_data;
   api(JSON.stringify(data));
 };
 

@@ -11,7 +11,7 @@ import { Menu, Tooltip, Modal } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Terminal from '@/assets/images/icons/terminal.svg';
 import Robot from '@/assets/images/robot.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function About() {
   const [visible, setVisible] = useState(false);
@@ -25,10 +25,7 @@ function About() {
     <>
       <div className='cursor-pointer'>
         <Tooltip placement='right' title='关于'>
-          <InfoCircleOutlined
-            style={{ fontSize: '20px' }}
-            onClick={handleShowModal}
-          />
+          <InfoCircleOutlined style={{ fontSize: '20px' }} onClick={handleShowModal} />
         </Tooltip>
       </div>
       <Modal open={visible} footer={null} closable={false} onCancel={handleClose}>
@@ -45,11 +42,11 @@ function App() {
   const navigator = useNavigate();
   const local = useLocation();
   const MenuItems: any = [
-    {
-      label: '首页',
-      key: '/',
-      icon: <HomeOutlined />,
-    },
+    // {
+    //   label: '首页',
+    //   key: '/',
+    //   icon: <HomeOutlined />,
+    // },
     {
       label: '任务列表',
       key: '/tasklist',
@@ -74,10 +71,19 @@ function App() {
   const MenuChange = (e: any) => {
     navigator(e.key);
   };
+
+  useEffect(() => {
+    if (local.pathname === '/') {
+      MenuChange({
+        key: '/tasklist',
+      });
+    }
+  }, []);
+
   return (
     <div className='h-full flex flex-col justify-between'>
       <Menu
-        defaultSelectedKeys={[local.pathname]}
+        defaultSelectedKeys={[local.pathname === '/' ? MenuItems[0].key : local.pathname]}
         mode='inline'
         style={{ width: '60px', backgroundColor: 'transparent' }}
         // theme='dark'

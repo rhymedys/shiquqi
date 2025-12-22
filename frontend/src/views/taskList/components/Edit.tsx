@@ -71,7 +71,7 @@ function App({ type, setEditVisible }: { type: string; setEditVisible: any }) {
         handleClose();
         refresh();
       },
-      onCancel() { },
+      onCancel() {},
     });
   };
   const onFinish = async (values: any) => {
@@ -166,7 +166,7 @@ function App({ type, setEditVisible }: { type: string; setEditVisible: any }) {
             )}
           </>
         )}
-        <>
+        {/* <>
           <Form.Item name='autoMail' label='发送邮件'>
             <Switch
               checked={autoMail}
@@ -188,7 +188,7 @@ function App({ type, setEditVisible }: { type: string; setEditVisible: any }) {
               <Input placeholder='请输入邮件地址' />
             </Form.Item>
           )}
-        </>
+        </> */}
         <Form.Item className='mb-[0px]'>
           <div className='flex justify-between'>
             {type !== 'create' ? (
